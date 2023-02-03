@@ -6,6 +6,8 @@
 
 ## Usage
 
+- Use in Typescript
+
 ```ts
 import { Keycloak } from "keycloak-admin-js";
 
@@ -16,7 +18,7 @@ const kc = Keycloak.authenticate(url, realmID, clientID, clientSecret);
 const users = await kc.admin.realm(realmID).users.list();
 ```
 
-- To use the `Greeter` class in a JavaScript file -
+- Use in Javascript
 
 ```js
 const Keycloak = require("keycloak-admin-js").Keycloak;
