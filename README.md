@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/Tera-Group/keycloak-admin-js.svg?branch=main)](https://travis-ci.org/Tera-Group/keycloak-admin-js.svg?branch=main)
-[![Coverage Status](https://coveralls.io/repos/github/Tera-Group/keycloak-admin-js/badge.svg?branch=main)](https://coveralls.io/github/Tera-Group/keycloak-admin-js?branch=main)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 # Keycloak Admin JS client

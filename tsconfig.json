@@ -13,12 +13,13 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true
   },
-  "include": ["src/**/*", "scripts/gendef.js"],
-  "exclude": ["node_modules", "**/*-spec.ts"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
