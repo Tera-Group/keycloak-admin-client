@@ -19,6 +19,6 @@
     "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "scripts/gendef.js"],
   "exclude": ["node_modules", "**/*-spec.ts"]
 }
