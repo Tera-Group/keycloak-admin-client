@@ -15,31 +15,25 @@
 /**
  *
  * @export
- * @interface Permission
+ * @interface ManagementPermissionReference
  */
-export interface Permission {
+export interface ManagementPermissionReference {
+  /**
+   *
+   * @type {boolean}
+   * @memberof ManagementPermissionReference
+   */
+  enabled?: boolean;
+  /**
+   *
+   * @type {string}
+   * @memberof ManagementPermissionReference
+   */
+  resource?: string;
   /**
    *
    * @type {{ [key: string]: any; }}
-   * @memberof Permission
+   * @memberof ManagementPermissionReference
    */
-  claims?: { [key: string]: any };
-  /**
-   *
-   * @type {string}
-   * @memberof Permission
-   */
-  rsid?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof Permission
-   */
-  rsname?: string;
-  /**
-   *
-   * @type {Array<string>}
-   * @memberof Permission
-   */
-  scopes?: Array<string>;
+  scopePermissions?: { [key: string]: any };
 }

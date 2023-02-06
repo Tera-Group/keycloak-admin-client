@@ -15,31 +15,19 @@
 /**
  *
  * @export
- * @interface Permission
+ * @interface SpiInfoRepresentation
  */
-export interface Permission {
+export interface SpiInfoRepresentation {
+  /**
+   *
+   * @type {boolean}
+   * @memberof SpiInfoRepresentation
+   */
+  internal?: boolean;
   /**
    *
    * @type {{ [key: string]: any; }}
-   * @memberof Permission
+   * @memberof SpiInfoRepresentation
    */
-  claims?: { [key: string]: any };
-  /**
-   *
-   * @type {string}
-   * @memberof Permission
-   */
-  rsid?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof Permission
-   */
-  rsname?: string;
-  /**
-   *
-   * @type {Array<string>}
-   * @memberof Permission
-   */
-  scopes?: Array<string>;
+  providers?: { [key: string]: any };
 }

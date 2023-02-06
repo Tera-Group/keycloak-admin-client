@@ -15,31 +15,13 @@
 /**
  *
  * @export
- * @interface Permission
+ * @interface AccessTokenCertConf
  */
-export interface Permission {
-  /**
-   *
-   * @type {{ [key: string]: any; }}
-   * @memberof Permission
-   */
-  claims?: { [key: string]: any };
+export interface AccessTokenCertConf {
   /**
    *
    * @type {string}
-   * @memberof Permission
+   * @memberof AccessTokenCertConf
    */
-  rsid?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof Permission
-   */
-  rsname?: string;
-  /**
-   *
-   * @type {Array<string>}
-   * @memberof Permission
-   */
-  scopes?: Array<string>;
+  'x5t#S256'?: string;
 }

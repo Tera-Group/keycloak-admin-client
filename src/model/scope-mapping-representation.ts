@@ -15,31 +15,31 @@
 /**
  *
  * @export
- * @interface Permission
+ * @interface ScopeMappingRepresentation
  */
-export interface Permission {
-  /**
-   *
-   * @type {{ [key: string]: any; }}
-   * @memberof Permission
-   */
-  claims?: { [key: string]: any };
+export interface ScopeMappingRepresentation {
   /**
    *
    * @type {string}
-   * @memberof Permission
+   * @memberof ScopeMappingRepresentation
    */
-  rsid?: string;
+  client?: string;
   /**
    *
    * @type {string}
-   * @memberof Permission
+   * @memberof ScopeMappingRepresentation
    */
-  rsname?: string;
+  clientScope?: string;
   /**
    *
    * @type {Array<string>}
-   * @memberof Permission
+   * @memberof ScopeMappingRepresentation
    */
-  scopes?: Array<string>;
+  roles?: Array<string>;
+  /**
+   *
+   * @type {string}
+   * @memberof ScopeMappingRepresentation
+   */
+  self?: string;
 }

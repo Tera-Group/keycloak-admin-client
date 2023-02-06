@@ -15,31 +15,25 @@
 /**
  *
  * @export
- * @interface Permission
+ * @interface MultivaluedHashMap
  */
-export interface Permission {
+export interface MultivaluedHashMap {
   /**
    *
-   * @type {{ [key: string]: any; }}
-   * @memberof Permission
+   * @type {boolean}
+   * @memberof MultivaluedHashMap
    */
-  claims?: { [key: string]: any };
+  empty?: boolean;
   /**
    *
-   * @type {string}
-   * @memberof Permission
+   * @type {number}
+   * @memberof MultivaluedHashMap
    */
-  rsid?: string;
+  loadFactor?: number;
   /**
    *
-   * @type {string}
-   * @memberof Permission
+   * @type {number}
+   * @memberof MultivaluedHashMap
    */
-  rsname?: string;
-  /**
-   *
-   * @type {Array<string>}
-   * @memberof Permission
-   */
-  scopes?: Array<string>;
+  threshold?: number;
 }

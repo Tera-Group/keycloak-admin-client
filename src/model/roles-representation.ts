@@ -12,34 +12,26 @@
  * Do not edit the class manually.
  */
 
+// May contain unused imports in some cases
+// @ts-ignore
+import { RoleRepresentation } from './role-representation';
+
 /**
  *
  * @export
- * @interface Permission
+ * @interface RolesRepresentation
  */
-export interface Permission {
+export interface RolesRepresentation {
   /**
    *
    * @type {{ [key: string]: any; }}
-   * @memberof Permission
+   * @memberof RolesRepresentation
    */
-  claims?: { [key: string]: any };
+  client?: { [key: string]: any };
   /**
    *
-   * @type {string}
-   * @memberof Permission
+   * @type {Array<RoleRepresentation>}
+   * @memberof RolesRepresentation
    */
-  rsid?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof Permission
-   */
-  rsname?: string;
-  /**
-   *
-   * @type {Array<string>}
-   * @memberof Permission
-   */
-  scopes?: Array<string>;
+  realm?: Array<RoleRepresentation>;
 }

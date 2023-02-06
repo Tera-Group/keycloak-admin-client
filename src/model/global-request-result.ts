@@ -15,31 +15,19 @@
 /**
  *
  * @export
- * @interface Permission
+ * @interface GlobalRequestResult
  */
-export interface Permission {
-  /**
-   *
-   * @type {{ [key: string]: any; }}
-   * @memberof Permission
-   */
-  claims?: { [key: string]: any };
-  /**
-   *
-   * @type {string}
-   * @memberof Permission
-   */
-  rsid?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof Permission
-   */
-  rsname?: string;
+export interface GlobalRequestResult {
   /**
    *
    * @type {Array<string>}
-   * @memberof Permission
+   * @memberof GlobalRequestResult
    */
-  scopes?: Array<string>;
+  failedRequests?: Array<string>;
+  /**
+   *
+   * @type {Array<string>}
+   * @memberof GlobalRequestResult
+   */
+  successRequests?: Array<string>;
 }

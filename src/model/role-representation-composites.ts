@@ -15,31 +15,19 @@
 /**
  *
  * @export
- * @interface Permission
+ * @interface RoleRepresentationComposites
  */
-export interface Permission {
+export interface RoleRepresentationComposites {
   /**
    *
    * @type {{ [key: string]: any; }}
-   * @memberof Permission
+   * @memberof RoleRepresentationComposites
    */
-  claims?: { [key: string]: any };
-  /**
-   *
-   * @type {string}
-   * @memberof Permission
-   */
-  rsid?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof Permission
-   */
-  rsname?: string;
+  client?: { [key: string]: any };
   /**
    *
    * @type {Array<string>}
-   * @memberof Permission
+   * @memberof RoleRepresentationComposites
    */
-  scopes?: Array<string>;
+  realm?: Array<string>;
 }

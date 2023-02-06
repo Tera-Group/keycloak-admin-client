@@ -12,34 +12,26 @@
  * Do not edit the class manually.
  */
 
+// May contain unused imports in some cases
+// @ts-ignore
+import { JsonNode } from './json-node';
+
 /**
  *
  * @export
- * @interface Permission
+ * @interface ClientPolicyConditionRepresentation
  */
-export interface Permission {
-  /**
-   *
-   * @type {{ [key: string]: any; }}
-   * @memberof Permission
-   */
-  claims?: { [key: string]: any };
+export interface ClientPolicyConditionRepresentation {
   /**
    *
    * @type {string}
-   * @memberof Permission
+   * @memberof ClientPolicyConditionRepresentation
    */
-  rsid?: string;
+  condition?: string;
   /**
    *
-   * @type {string}
-   * @memberof Permission
+   * @type {JsonNode}
+   * @memberof ClientPolicyConditionRepresentation
    */
-  rsname?: string;
-  /**
-   *
-   * @type {Array<string>}
-   * @memberof Permission
-   */
-  scopes?: Array<string>;
+  configuration?: JsonNode;
 }

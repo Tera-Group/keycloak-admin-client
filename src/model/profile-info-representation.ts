@@ -15,31 +15,31 @@
 /**
  *
  * @export
- * @interface Permission
+ * @interface ProfileInfoRepresentation
  */
-export interface Permission {
-  /**
-   *
-   * @type {{ [key: string]: any; }}
-   * @memberof Permission
-   */
-  claims?: { [key: string]: any };
-  /**
-   *
-   * @type {string}
-   * @memberof Permission
-   */
-  rsid?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof Permission
-   */
-  rsname?: string;
+export interface ProfileInfoRepresentation {
   /**
    *
    * @type {Array<string>}
-   * @memberof Permission
+   * @memberof ProfileInfoRepresentation
    */
-  scopes?: Array<string>;
+  disabledFeatures?: Array<string>;
+  /**
+   *
+   * @type {Array<string>}
+   * @memberof ProfileInfoRepresentation
+   */
+  experimentalFeatures?: Array<string>;
+  /**
+   *
+   * @type {string}
+   * @memberof ProfileInfoRepresentation
+   */
+  name?: string;
+  /**
+   *
+   * @type {Array<string>}
+   * @memberof ProfileInfoRepresentation
+   */
+  previewFeatures?: Array<string>;
 }

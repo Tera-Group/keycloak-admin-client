@@ -15,31 +15,37 @@
 /**
  *
  * @export
- * @interface Permission
+ * @interface ProtocolMapperRepresentation
  */
-export interface Permission {
+export interface ProtocolMapperRepresentation {
   /**
    *
    * @type {{ [key: string]: any; }}
-   * @memberof Permission
+   * @memberof ProtocolMapperRepresentation
    */
-  claims?: { [key: string]: any };
+  config?: { [key: string]: any };
   /**
    *
    * @type {string}
-   * @memberof Permission
+   * @memberof ProtocolMapperRepresentation
    */
-  rsid?: string;
+  id?: string;
   /**
    *
    * @type {string}
-   * @memberof Permission
+   * @memberof ProtocolMapperRepresentation
    */
-  rsname?: string;
+  name?: string;
   /**
    *
-   * @type {Array<string>}
-   * @memberof Permission
+   * @type {string}
+   * @memberof ProtocolMapperRepresentation
    */
-  scopes?: Array<string>;
+  protocol?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof ProtocolMapperRepresentation
+   */
+  protocolMapper?: string;
 }

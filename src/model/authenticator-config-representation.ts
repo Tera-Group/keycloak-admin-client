@@ -15,31 +15,25 @@
 /**
  *
  * @export
- * @interface Permission
+ * @interface AuthenticatorConfigRepresentation
  */
-export interface Permission {
+export interface AuthenticatorConfigRepresentation {
+  /**
+   *
+   * @type {string}
+   * @memberof AuthenticatorConfigRepresentation
+   */
+  alias?: string;
   /**
    *
    * @type {{ [key: string]: any; }}
-   * @memberof Permission
+   * @memberof AuthenticatorConfigRepresentation
    */
-  claims?: { [key: string]: any };
+  config?: { [key: string]: any };
   /**
    *
    * @type {string}
-   * @memberof Permission
+   * @memberof AuthenticatorConfigRepresentation
    */
-  rsid?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof Permission
-   */
-  rsname?: string;
-  /**
-   *
-   * @type {Array<string>}
-   * @memberof Permission
-   */
-  scopes?: Array<string>;
+  id?: string;
 }

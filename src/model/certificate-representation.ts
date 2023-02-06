@@ -15,31 +15,31 @@
 /**
  *
  * @export
- * @interface Permission
+ * @interface CertificateRepresentation
  */
-export interface Permission {
-  /**
-   *
-   * @type {{ [key: string]: any; }}
-   * @memberof Permission
-   */
-  claims?: { [key: string]: any };
+export interface CertificateRepresentation {
   /**
    *
    * @type {string}
-   * @memberof Permission
+   * @memberof CertificateRepresentation
    */
-  rsid?: string;
+  certificate?: string;
   /**
    *
    * @type {string}
-   * @memberof Permission
+   * @memberof CertificateRepresentation
    */
-  rsname?: string;
+  kid?: string;
   /**
    *
-   * @type {Array<string>}
-   * @memberof Permission
+   * @type {string}
+   * @memberof CertificateRepresentation
    */
-  scopes?: Array<string>;
+  privateKey?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof CertificateRepresentation
+   */
+  publicKey?: string;
 }

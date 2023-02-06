@@ -14,245 +14,290 @@
 
 // May contain unused imports in some cases
 // @ts-ignore
+import { AccessTokenAccess } from './access-token-access';
+// May contain unused imports in some cases
+// @ts-ignore
+import { AccessTokenAuthorization } from './access-token-authorization';
+// May contain unused imports in some cases
+// @ts-ignore
+import { AccessTokenCertConf } from './access-token-cert-conf';
+// May contain unused imports in some cases
+// @ts-ignore
 import { AddressClaimSet } from './address-claim-set';
 
 /**
  *
  * @export
- * @interface IDToken
+ * @interface AccessToken
  */
-export interface IDToken {
+export interface AccessToken {
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   acr?: string;
   /**
    *
    * @type {AddressClaimSet}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   address?: AddressClaimSet;
   /**
    *
+   * @type {Array<string>}
+   * @memberof AccessToken
+   */
+  'allowed-origins'?: Array<string>;
+  /**
+   *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   at_hash?: string;
   /**
    *
    * @type {number}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   auth_time?: number;
   /**
    *
+   * @type {AccessTokenAuthorization}
+   * @memberof AccessToken
+   */
+  authorization?: AccessTokenAuthorization;
+  /**
+   *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   azp?: string;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   birthdate?: string;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   c_hash?: string;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
-  category?: IDTokenCategoryEnum;
+  category?: AccessTokenCategoryEnum;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   claims_locales?: string;
   /**
    *
+   * @type {AccessTokenCertConf}
+   * @memberof AccessToken
+   */
+  cnf?: AccessTokenCertConf;
+  /**
+   *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   email?: string;
   /**
    *
    * @type {boolean}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   email_verified?: boolean;
   /**
    *
    * @type {number}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   exp?: number;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   family_name?: string;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   gender?: string;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   given_name?: string;
   /**
    *
    * @type {number}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   iat?: number;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   iss?: string;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   jti?: string;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   locale?: string;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   middle_name?: string;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   name?: string;
   /**
    *
    * @type {number}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   nbf?: number;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   nickname?: string;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   nonce?: string;
   /**
    *
    * @type {{ [key: string]: any; }}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   otherClaims?: { [key: string]: any };
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   phone_number?: string;
   /**
    *
    * @type {boolean}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   phone_number_verified?: boolean;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   picture?: string;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   preferred_username?: string;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   profile?: string;
   /**
    *
+   * @type {AccessTokenAccess}
+   * @memberof AccessToken
+   */
+  realm_access?: AccessTokenAccess;
+  /**
+   *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   s_hash?: string;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
+   */
+  scope?: string;
+  /**
+   *
+   * @type {string}
+   * @memberof AccessToken
    */
   session_state?: string;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   sid?: string;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   sub?: string;
   /**
    *
+   * @type {Array<string>}
+   * @memberof AccessToken
+   */
+  'trusted-certs'?: Array<string>;
+  /**
+   *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   typ?: string;
   /**
    *
    * @type {number}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   updated_at?: number;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   website?: string;
   /**
    *
    * @type {string}
-   * @memberof IDToken
+   * @memberof AccessToken
    */
   zoneinfo?: string;
 }
 
-export const IDTokenCategoryEnum = {
+export const AccessTokenCategoryEnum = {
   Internal: 'INTERNAL',
   Access: 'ACCESS',
   Id: 'ID',
@@ -262,5 +307,5 @@ export const IDTokenCategoryEnum = {
   AuthorizationResponse: 'AUTHORIZATION_RESPONSE',
 } as const;
 
-export type IDTokenCategoryEnum =
-  (typeof IDTokenCategoryEnum)[keyof typeof IDTokenCategoryEnum];
+export type AccessTokenCategoryEnum =
+  (typeof AccessTokenCategoryEnum)[keyof typeof AccessTokenCategoryEnum];

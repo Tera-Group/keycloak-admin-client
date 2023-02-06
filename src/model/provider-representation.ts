@@ -15,31 +15,19 @@
 /**
  *
  * @export
- * @interface Permission
+ * @interface ProviderRepresentation
  */
-export interface Permission {
+export interface ProviderRepresentation {
   /**
    *
    * @type {{ [key: string]: any; }}
-   * @memberof Permission
+   * @memberof ProviderRepresentation
    */
-  claims?: { [key: string]: any };
+  operationalInfo?: { [key: string]: any };
   /**
    *
-   * @type {string}
-   * @memberof Permission
+   * @type {number}
+   * @memberof ProviderRepresentation
    */
-  rsid?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof Permission
-   */
-  rsname?: string;
-  /**
-   *
-   * @type {Array<string>}
-   * @memberof Permission
-   */
-  scopes?: Array<string>;
+  order?: number;
 }

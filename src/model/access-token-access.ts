@@ -15,31 +15,19 @@
 /**
  *
  * @export
- * @interface Permission
+ * @interface AccessTokenAccess
  */
-export interface Permission {
-  /**
-   *
-   * @type {{ [key: string]: any; }}
-   * @memberof Permission
-   */
-  claims?: { [key: string]: any };
-  /**
-   *
-   * @type {string}
-   * @memberof Permission
-   */
-  rsid?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof Permission
-   */
-  rsname?: string;
+export interface AccessTokenAccess {
   /**
    *
    * @type {Array<string>}
-   * @memberof Permission
+   * @memberof AccessTokenAccess
    */
-  scopes?: Array<string>;
+  roles?: Array<string>;
+  /**
+   *
+   * @type {boolean}
+   * @memberof AccessTokenAccess
+   */
+  verify_caller?: boolean;
 }

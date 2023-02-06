@@ -15,31 +15,31 @@
 /**
  *
  * @export
- * @interface Permission
+ * @interface UserConsentRepresentation
  */
-export interface Permission {
-  /**
-   *
-   * @type {{ [key: string]: any; }}
-   * @memberof Permission
-   */
-  claims?: { [key: string]: any };
+export interface UserConsentRepresentation {
   /**
    *
    * @type {string}
-   * @memberof Permission
+   * @memberof UserConsentRepresentation
    */
-  rsid?: string;
+  clientId?: string;
   /**
    *
-   * @type {string}
-   * @memberof Permission
+   * @type {number}
+   * @memberof UserConsentRepresentation
    */
-  rsname?: string;
+  createdDate?: number;
   /**
    *
    * @type {Array<string>}
-   * @memberof Permission
+   * @memberof UserConsentRepresentation
    */
-  scopes?: Array<string>;
+  grantedClientScopes?: Array<string>;
+  /**
+   *
+   * @type {number}
+   * @memberof UserConsentRepresentation
+   */
+  lastUpdatedDate?: number;
 }

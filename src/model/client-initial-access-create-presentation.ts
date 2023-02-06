@@ -15,31 +15,19 @@
 /**
  *
  * @export
- * @interface Permission
+ * @interface ClientInitialAccessCreatePresentation
  */
-export interface Permission {
+export interface ClientInitialAccessCreatePresentation {
   /**
    *
-   * @type {{ [key: string]: any; }}
-   * @memberof Permission
+   * @type {number}
+   * @memberof ClientInitialAccessCreatePresentation
    */
-  claims?: { [key: string]: any };
+  count?: number;
   /**
    *
-   * @type {string}
-   * @memberof Permission
+   * @type {number}
+   * @memberof ClientInitialAccessCreatePresentation
    */
-  rsid?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof Permission
-   */
-  rsname?: string;
-  /**
-   *
-   * @type {Array<string>}
-   * @memberof Permission
-   */
-  scopes?: Array<string>;
+  expiration?: number;
 }

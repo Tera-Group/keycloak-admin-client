@@ -15,31 +15,25 @@
 /**
  *
  * @export
- * @interface Permission
+ * @interface FederatedIdentityRepresentation
  */
-export interface Permission {
-  /**
-   *
-   * @type {{ [key: string]: any; }}
-   * @memberof Permission
-   */
-  claims?: { [key: string]: any };
+export interface FederatedIdentityRepresentation {
   /**
    *
    * @type {string}
-   * @memberof Permission
+   * @memberof FederatedIdentityRepresentation
    */
-  rsid?: string;
+  identityProvider?: string;
   /**
    *
    * @type {string}
-   * @memberof Permission
+   * @memberof FederatedIdentityRepresentation
    */
-  rsname?: string;
+  userId?: string;
   /**
    *
-   * @type {Array<string>}
-   * @memberof Permission
+   * @type {string}
+   * @memberof FederatedIdentityRepresentation
    */
-  scopes?: Array<string>;
+  userName?: string;
 }
